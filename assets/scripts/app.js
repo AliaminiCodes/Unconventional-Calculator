@@ -30,6 +30,14 @@ function subtract() {
     const iniitialResult = currentResult;
     currentResult -= enteredNumber;
     creatAndWriteOutput('-', iniitialResult, enteredNumber);
+    const logEntry = {
+        operation: 'SUBTRACT',
+        prevResult: iniitialResult,
+        number: enteredNumber,
+        result: currentResult
+    };
+    logEntries.push(logEntry);
+    console.log(logEntries);
 }
 
 function multiply() {
@@ -37,13 +45,29 @@ function multiply() {
     const iniitialResult = currentResult;
     currentResult *= enteredNumber;
     creatAndWriteOutput('*', iniitialResult, enteredNumber);
+    const logEntry = {
+        operation: 'MULTIPLY',
+        prevResult: iniitialResult,
+        number: enteredNumber,
+        result: currentResult
+    };
+    logEntries.push(logEntry);
+    console.log(logEntries);
 }
 
 function divide () {
     const enteredNumber = getUserNumberInput();
     const iniitialResult = currentResult;
     currentResult /= enteredNumber;
-    creatAndWriteOutput('/', iniitialResult, enteredNumber);    
+    creatAndWriteOutput('/', iniitialResult, enteredNumber);
+    const logEntry = {
+        operation: 'DIVIDE',
+        prevResult: iniitialResult,
+        number: enteredNumber,
+        result: currentResult
+    };
+    logEntries.push(logEntry);
+    console.log(logEntries);
 }
 
 
