@@ -9,20 +9,28 @@ function creatAndWriteOutput(operator, resultBeforeCalc, calcNumber) {
     outputResult(currentResult,calcDescription );
 }
 
+function writeToLog(
+    operationIdentifier,
+    prevResult,
+    operationNumber,
+    newResult
+) {
+    const logEntry = {
+        operation: operationIdentifier,
+        prevResult: prevResult,
+        number: operationNumber,
+        result: newResult
+    };
+    logEntries.push(logEntry);
+    console.log(logEntries);
+}
+
 function add() {
     const enteredNumber = getUserNumberInput();
     const iniitialResult = currentResult;
     currentResult += enteredNumber;
     creatAndWriteOutput('+', iniitialResult, enteredNumber);
-    const logEntry = {
-        operation: 'ADD',
-        prevResult: iniitialResult,
-        number: enteredNumber,
-        result: currentResult
-    };
-    logEntries.push(logEntry);
-    console.log(logEntries);
-     
+    writeToLog('Add', iniitialResult, enteredNumber, currentResult);  
 }
 
 function subtract() {
@@ -30,14 +38,7 @@ function subtract() {
     const iniitialResult = currentResult;
     currentResult -= enteredNumber;
     creatAndWriteOutput('-', iniitialResult, enteredNumber);
-    const logEntry = {
-        operation: 'SUBTRACT',
-        prevResult: iniitialResult,
-        number: enteredNumber,
-        result: currentResult
-    };
-    logEntries.push(logEntry);
-    console.log(logEntries);
+    writeToLog('SUBTRACT', iniitialResult, enteredNumber, currentResult);
 }
 
 function multiply() {
@@ -45,14 +46,7 @@ function multiply() {
     const iniitialResult = currentResult;
     currentResult *= enteredNumber;
     creatAndWriteOutput('*', iniitialResult, enteredNumber);
-    const logEntry = {
-        operation: 'MULTIPLY',
-        prevResult: iniitialResult,
-        number: enteredNumber,
-        result: currentResult
-    };
-    logEntries.push(logEntry);
-    console.log(logEntries);
+    writeToLog('MULTIPLY', iniitialResult, enteredNumber, currentResult);
 }
 
 function divide () {
@@ -60,14 +54,7 @@ function divide () {
     const iniitialResult = currentResult;
     currentResult /= enteredNumber;
     creatAndWriteOutput('/', iniitialResult, enteredNumber);
-    const logEntry = {
-        operation: 'DIVIDE',
-        prevResult: iniitialResult,
-        number: enteredNumber,
-        result: currentResult
-    };
-    logEntries.push(logEntry);
-    console.log(logEntries);
+    writeToLog('DIVIDE', iniitialResult, enteredNumber, currentResult);
 }
 
 
