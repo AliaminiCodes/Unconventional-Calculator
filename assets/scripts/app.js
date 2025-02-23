@@ -1,9 +1,13 @@
 const defultResult = 0;
 let currentResult = defultResult;
 let logEntries = [];
+
+// Gets input from input field
 function getUserNumberInput() {
     return parseInt(userInput.value);
 }
+
+// Generates and writes calculation log
 function creatAndWriteOutput(operator, resultBeforeCalc, calcNumber) {
     const calcDescription = `${resultBeforeCalc} ${operator} ${calcNumber}`;
     outputResult(currentResult,calcDescription );
