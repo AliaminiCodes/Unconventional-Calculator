@@ -31,34 +31,34 @@ function writeToLog(
 
 function add() {
     const enteredNumber = getUserNumberInput();
-    const iniitialResult = currentResult;
+    const initialResult = currentResult;
     currentResult += enteredNumber;
-    creatAndWriteOutput('+', iniitialResult, enteredNumber);
-    writeToLog('Add', iniitialResult, enteredNumber, currentResult);  
+    creatAndWriteOutput('+', initialResult, enteredNumber);
+    writeToLog('Add', initialResult, enteredNumber, currentResult);  
 }
 
 function subtract() {
     const enteredNumber = getUserNumberInput();
-    const iniitialResult = currentResult;
+    const initialResult = currentResult;
     currentResult -= enteredNumber;
-    creatAndWriteOutput('-', iniitialResult, enteredNumber);
-    writeToLog('SUBTRACT', iniitialResult, enteredNumber, currentResult);
+    creatAndWriteOutput('-', initialResult, enteredNumber);
+    writeToLog('SUBTRACT', initialResult, enteredNumber, currentResult);
 }
 
 function multiply() {
     const enteredNumber = getUserNumberInput();
-    const iniitialResult = currentResult;
+    const initialResult = currentResult;
     currentResult *= enteredNumber;
-    creatAndWriteOutput('*', iniitialResult, enteredNumber);
-    writeToLog('MULTIPLY', iniitialResult, enteredNumber, currentResult);
+    creatAndWriteOutput('*', initialResult, enteredNumber);
+    writeToLog('MULTIPLY', initialResult, enteredNumber, currentResult);
 }
 
 function divide () {
     const enteredNumber = getUserNumberInput();
-    const iniitialResult = currentResult;
+    const initialResult = currentResult;
     currentResult /= enteredNumber;
-    creatAndWriteOutput('/', iniitialResult, enteredNumber);
-    writeToLog('DIVIDE', iniitialResult, enteredNumber, currentResult);
+    creatAndWriteOutput('/', initialResult, enteredNumber);
+    writeToLog('DIVIDE', initialResult, enteredNumber, currentResult);
 }
 
 
