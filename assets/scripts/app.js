@@ -36,7 +36,8 @@ function calculateResult(calculationType) {
         calculationType !== 'SUBTRACT' &&
         calculationType !== 'MULTIPLY' &&
         calculationType !== 'DIVIDE' &&
-        calculationType !== 'CLEAR' ||
+        calculationType !== 'CLEAR' &&
+        calculationType !== 'POWER' ||
         !enteredNumber 
     ) {
         return;
@@ -62,6 +63,9 @@ function calculateResult(calculationType) {
     outputResult(currentResult, 'CLEARED');
     writeToLog(calculationType, initialResult, 0, currentResult);
         return;
+    } else if (calculationType === 'POWER') { 
+        currentResult = Math.pow(currentResult, enteredNumber);
+        mathOperator = '^';
     }
     
     creatAndWriteOutput(mathOperator, initialResult, enteredNumber);
@@ -88,12 +92,15 @@ function divide () {
 function clear() {
     calculateResult('CLEAR');
 }
+function power() {
+    calculateResult('POWER'); }
 
 addBtn.addEventListener("click", add);
 subtractBtn.addEventListener("click", subtract);
 multiplyBtn.addEventListener("click", multiply);
 divideBtn.addEventListener("click", divide);
 clearBtn.addEventListener("click", clear);
+powerBtn.addEventListener("click", power);
 
 
 
