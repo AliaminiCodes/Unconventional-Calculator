@@ -36,13 +36,17 @@ function calculateResult(calculationType) {
         calculationType !== 'SUBTRACT' &&
         calculationType !== 'MULTIPLY' &&
         calculationType !== 'DIVIDE' &&
-        calculationType !== 'CLEAR' &&
         calculationType !== 'POWER' &&
-        calculationType !== 'PERCENT' ||
-        !enteredNumber 
+        calculationType !== 'PERCENT'   
     ) {
         return;
     }
+
+    if (!enteredNumber) {
+        outputResult(currentResult, 'ERROR: Enter a number');
+        return;
+    }
+
     const initialResult = currentResult;
     let mathOperator;
     if (calculationType === 'ADD') {
@@ -57,20 +61,14 @@ function calculateResult(calculationType) {
     }else if ( calculationType === 'DIVIDE' ) {
         currentResult /= enteredNumber;
         mathOperator = '/';
-    }else if ( calculationType === 'CLEAR' ) {
-    currentResult = defultResult;
-    userInput.value = '';
-    mathOperator = 'C';
-    outputResult(currentResult, 'CLEARED');
-    writeToLog(calculationType, initialResult, 0, currentResult);
-        return;
     } else if (calculationType === 'POWER') { 
         currentResult = Math.pow(currentResult, enteredNumber);
         mathOperator = '^';
-    } else if (calculationType === 'PERCENT') { // دکمه درصد
+    } else if (calculationType === 'PERCENT') {  
         currentResult = currentResult * (enteredNumber / 100);
         mathOperator = '%';
     }
+
     creatAndWriteOutput(mathOperator, initialResult, enteredNumber);
     writeToLog(calculationType, initialResult, enteredNumber, currentResult);
       
@@ -92,16 +90,22 @@ function divide () {
     calculateResult('DIVIDE');
 }
 
-function clear() {
-    calculateResult('CLEAR');
-}
-
 function power() {
     calculateResult('POWER'); 
 }
 
 function percent() {
      calculateResult('PERCENT'); 
+}
+
+function clear() {
+    const initialResult = currentResult;
+    currentResult = defultResult;
+    userInput.value = '';
+    writeToLog('CLEAR', initialResult, 0, currentResult);
+    logEntries = [];
+    outputResult(currentResult, 'CLEARED');
+    console.clear();
 }
 
 addBtn.addEventListener("click", add);
