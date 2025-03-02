@@ -77,11 +77,20 @@ function divide () {
     calculateResult('DIVIDE');
 }
 
+function clear() {
+    currentResult = defultResult;
+    userInput.value = '';
+    outputResult(currentResult, '');
+    logEntries = [];
+}
+
 
 addBtn.addEventListener("click", add);
 subtractBtn.addEventListener("click", subtract);
 multiplyBtn.addEventListener("click", multiply);
 divideBtn.addEventListener("click", divide);
+clearBtn.addEventListener("click", clear);
+
 
 
 console.log("");
