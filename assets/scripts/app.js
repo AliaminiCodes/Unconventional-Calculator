@@ -35,8 +35,8 @@ function calculateResult(calculationType) {
         calculationType !== 'ADD' &&
         calculationType !== 'SUBTRACT' &&
         calculationType !== 'MULTIPLY' &&
-        calculationType !== 'CLEAR' &&
-        calculationType !== 'DIVIDE' ||
+        calculationType !== 'DIVIDE' &&
+        calculationType !== 'CLEAR' ||
         !enteredNumber 
     ) {
         return;
@@ -59,6 +59,9 @@ function calculateResult(calculationType) {
     currentResult = defultResult;
     userInput.value = '';
     mathOperator = 'C';
+    outputResult(currentResult, 'CLEARED');
+    writeToLog(calculationType, initialResult, 0, currentResult);
+        return;
     }
     
     creatAndWriteOutput(mathOperator, initialResult, enteredNumber);
