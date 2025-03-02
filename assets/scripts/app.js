@@ -37,7 +37,8 @@ function calculateResult(calculationType) {
         calculationType !== 'MULTIPLY' &&
         calculationType !== 'DIVIDE' &&
         calculationType !== 'CLEAR' &&
-        calculationType !== 'POWER' ||
+        calculationType !== 'POWER' &&
+        calculationType !== 'PERCENT' ||
         !enteredNumber 
     ) {
         return;
@@ -66,8 +67,10 @@ function calculateResult(calculationType) {
     } else if (calculationType === 'POWER') { 
         currentResult = Math.pow(currentResult, enteredNumber);
         mathOperator = '^';
+    } else if (calculationType === 'PERCENT') { // دکمه درصد
+        currentResult = currentResult * (enteredNumber / 100);
+        mathOperator = '%';
     }
-    
     creatAndWriteOutput(mathOperator, initialResult, enteredNumber);
     writeToLog(calculationType, initialResult, enteredNumber, currentResult);
       
@@ -92,8 +95,14 @@ function divide () {
 function clear() {
     calculateResult('CLEAR');
 }
+
 function power() {
-    calculateResult('POWER'); }
+    calculateResult('POWER'); 
+}
+
+function percent() {
+     calculateResult('PERCENT'); 
+}
 
 addBtn.addEventListener("click", add);
 subtractBtn.addEventListener("click", subtract);
@@ -101,6 +110,7 @@ multiplyBtn.addEventListener("click", multiply);
 divideBtn.addEventListener("click", divide);
 clearBtn.addEventListener("click", clear);
 powerBtn.addEventListener("click", power);
+percentBtn.addEventListener("click", percent);
 
 
 
