@@ -4,6 +4,7 @@ const subtractBtn = document.getElementById("btn-subtract");
 const multiplyBtn = document.getElementById("btn-multiply");
 const divideBtn = document.getElementById("btn-divide");
 const clearBtn = document.getElementById("btn-clear");
+const powerBtn = document.getElementById("btn-power");
 
 const currentResultOutput = document.getElementById("current-result");
 const currentCalculationOutput = document.getElementById("current-calculation");
