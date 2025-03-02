@@ -35,6 +35,7 @@ function calculateResult(calculationType) {
         calculationType !== 'ADD' &&
         calculationType !== 'SUBTRACT' &&
         calculationType !== 'MULTIPLY' &&
+        calculationType !== 'CLEAR' &&
         calculationType !== 'DIVIDE' ||
         !enteredNumber 
     ) {
@@ -54,6 +55,10 @@ function calculateResult(calculationType) {
     }else if ( calculationType === 'DIVIDE' ) {
         currentResult /= enteredNumber;
         mathOperator = '/';
+    }else if ( calculationType === 'CLEAR' ) {
+    currentResult = defultResult;
+    userInput.value = '';
+    mathOperator = 'C';
     }
     
     creatAndWriteOutput(mathOperator, initialResult, enteredNumber);
@@ -78,12 +83,8 @@ function divide () {
 }
 
 function clear() {
-    currentResult = defultResult;
-    userInput.value = '';
-    outputResult(currentResult, '');
-    logEntries = [];
+    calculateResult('CLEAR');
 }
-
 
 addBtn.addEventListener("click", add);
 subtractBtn.addEventListener("click", subtract);
