@@ -22,16 +22,23 @@ header {
 #results,
 #calculator {
   margin: 2rem auto;
-  width: 40rem;
+  width: 45rem;
   max-width: 90%;
   border: 1px solid #023d6d;
   border-radius: 10px;
   padding: 1rem;
   color: #023d6d;
+  min-height: 15rem;
 }
 
 #results {
   text-align: center;
+  min-height: 13rem;
+  font-size: 1.2rem;
+}
+
+#results h2 {
+  font-size: 2rem;
 }
 
 #calculator input {
