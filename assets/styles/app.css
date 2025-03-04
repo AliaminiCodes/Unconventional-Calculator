@@ -1,16 +1,20 @@
+/* Fix size calculation for all elements */
 * {
   box-sizing: border-box;
 }
 
+/* Set font for the page */
 html {
   font-family: 'Roboto', open-sans;
 }
 
+/* Remove margin and add smooth color change */
 body {
   margin: 0;
   transition: background-color 0.4s, color 0.4s;
 }
 
+/* Style header with flexbox */
 header {
   background: #023d6d;
   color: white;
@@ -19,15 +23,17 @@ header {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Space items: button left, title center, spacer right */
   align-items: center;
 }
 
+/* Center the title */
 header h1 {
-  margin: 0; 
+  margin: 0;
   text-align: center;
 }
 
+/* Style the theme toggle button */
 #toggle-theme-btn {
   font: inherit;
   background: #084f88;
@@ -36,21 +42,24 @@ header h1 {
   padding: 0.5rem 1rem;
   cursor: pointer;
   border-radius: 1rem;
-  order: -1;
+  order: -1; /* Move button to left in flexbox */
   transition: background-color 0.4s, border-color 0.4s, color 0.4s;
 }
 
+/* Add empty space to balance header layout */
 .spacer {
-  width: 5.5rem;
-  height: 0; 
+  width: 5.5rem; /* Match button width to keep title centered */
+  height: 0; /* No height, just for spacing */
 }
 
+/* Hover effect for theme button */
 #toggle-theme-btn:hover,
 #toggle-theme-btn:active {
   background: #023d6d;
   border-color: #023d6d;
 }
 
+/* Style calculator and results sections */
 #results,
 #calculator {
   margin: 2rem auto;
@@ -64,16 +73,19 @@ header h1 {
   transition: border-color 0.4s, color 0.4s;
 }
 
+/* Center text in results */
 #results {
   text-align: center;
   min-height: 13rem;
   font-size: 1.2rem;
 }
 
+/* Bigger text for results headings */
 #results h2 {
   font-size: 2rem;
 }
 
+/* Style calculator input */
 #calculator input {
   font: inherit;
   font-size: 3rem;
@@ -86,14 +98,16 @@ header h1 {
   display: block;
   color: #023d6d;
   text-align: center;
-  border-radius:8px;
+  border-radius: 8px;
   transition: border-color 0.4s, color 0.4s;
 }
 
+/* Remove outline on input focus */
 #calculator input:focus {
   outline: none;
 }
 
+/* Style calculator buttons */
 #calculator button {
   font: inherit;
   background: #023d6d;
@@ -106,65 +120,76 @@ header h1 {
   transition: background-color 0.4s, border-color 0.4s;
 }
 
+/* Remove outline on button focus */
 #calculator button:focus {
   outline: none;
 }
 
+/* Hover effect for calculator buttons */
 #calculator button:hover,
 #calculator button:active {
   background: #084f88;
   border-color: #084f88;
 }
 
+/* Style action buttons */
 #calc-actions button {
   width: 5rem;
-  border-radius:0.7rem;
+  border-radius: 0.7rem;
 }
 
+/* Center action buttons */
 #calc-actions {
   margin-top: 1rem;
   text-align: center;
 }
 
+/* Dark mode for body */
 body.dark-mode {
   background: #121212;
   color: #ffffff;
 }
 
+/* Dark mode for header */
 body.dark-mode header {
   background: #2d3436;
 }
 
+/* Dark mode for calculator and results */
 body.dark-mode #calculator,
 body.dark-mode #results {
-   border-color: #ffffff;
-   color: #ffffff;
+  border-color: #ffffff;
+  color: #ffffff;
 }
 
+/* Dark mode for input */
 body.dark-mode #calculator input {
   border-color: #ffffff;
   color: #ffffff;
   background: #333333;
 }
 
+/* Dark mode for calculator buttons */
 body.dark-mode #calculator button {
   background: #1e1e1e;
   border-color: #ffffff;
 }
 
+/* Dark mode hover for calculator buttons */
 body.dark-mode #calculator button:hover,
 body.dark-mode #calculator button:active {
   background: #333333;
   border-color: #ffffff;
 }
 
+/* Dark mode for theme button */
 body.dark-mode #toggle-theme-btn {
   background: #b2bec3;
   border: 1px solid #C0C0C0;
-  color: #121212; 
+  color: #121212;
 }
 
-
+/* Dark mode hover for theme button */
 body.dark-mode #toggle-theme-btn:hover,
 body.dark-mode #toggle-theme-btn:active {
   background: #dfe6e9;
