@@ -8,6 +8,7 @@ html {
 
 body {
   margin: 0;
+  transition: background-color 0.4s, color 0.4s;
 }
 
 header {
@@ -17,7 +18,37 @@ header {
   text-align: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+header h1 {
+  margin: 0; 
+  text-align: center;
+}
+
+#toggle-theme-btn {
+  font: inherit;
+  background: #084f88;
+  color: white;
+  border: 1px solid #084f88;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 1rem;
+  order: -1;
+}
+
+.spacer {
+  width: 5.5rem;
+  height: 0; 
+}
+
+#toggle-theme-btn:hover,
+#toggle-theme-btn:active {
+  background: #023d6d;
+  border-color: #023d6d;
+ }
 
 #results,
 #calculator {
@@ -29,6 +60,7 @@ header {
   padding: 1rem;
   color: #023d6d;
   min-height: 15rem;
+  transition: border-color 0.4s, color 0.4s;
 }
 
 #results {
@@ -46,6 +78,7 @@ header {
   font-size: 3rem;
   border: 2px solid #023d6d;
   width: 17rem;
+  max-width: 100%;
   height: 5rem;
   padding: 0.15rem;
   margin: auto;
@@ -53,6 +86,7 @@ header {
   color: #023d6d;
   text-align: center;
   border-radius:8px;
+  transition: border-color 0.4s, color 0.4s;
 }
 
 #calculator input:focus {
@@ -68,6 +102,7 @@ header {
   cursor: pointer;
   font-size: 1.2rem;
   margin: 1.3rem 0;
+  transition: background-color 0.4s, border-color 0.4s;
 }
 
 #calculator button:focus {
@@ -82,9 +117,42 @@ header {
 
 #calc-actions button {
   width: 5rem;
+  border-radius:0.7rem;
 }
 
 #calc-actions {
   margin-top: 1rem;
   text-align: center;
+}
+
+body.dark-mode {
+  background: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode header {
+  background: #2d3436;
+}
+
+body.dark-mode #calculator,
+body.dark-mode #results {
+   border-color: #ffffff;
+   color: #ffffff;
+}
+
+body.dark-mode #calculator input {
+  border-color: #ffffff;
+  color: #ffffff;
+  background: #333333;
+}
+
+body.dark-mode #calculator button {
+  background: #1e1e1e;
+  border-color: #ffffff;
+}
+
+body.dark-mode #calculator button:hover,
+body.dark-mode #calculator button:active {
+  background: #333333;
+  border-color: #ffffff;
 }
