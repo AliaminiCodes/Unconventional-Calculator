@@ -6,6 +6,7 @@ const divideBtn = document.getElementById("btn-divide");
 const clearBtn = document.getElementById("btn-clear");
 const powerBtn = document.getElementById("btn-power");
 const percentBtn = document.getElementById("btn-percent");
+const toggleThemeBtn = document.getElementById("toggle-theme-btn");
 
 const currentResultOutput = document.getElementById("current-result");
 const currentCalculationOutput = document.getElementById("current-calculation");
