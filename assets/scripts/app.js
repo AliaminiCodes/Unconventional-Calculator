@@ -1,24 +1,20 @@
-const defultResult = 0;
+const defultResult = 0; // Starting result value
 let currentResult = defultResult;
-let logEntries = [];
+let logEntries = []; // Array to store calculation logs
 
-// Gets input from input field
+// Get number from input field
 function getUserNumberInput() {
     return parseFloat(userInput.value);
 }
 
-// Generates and writes calculation log
+// Show result and calculation on screen
 function creatAndWriteOutput(operator, resultBeforeCalc, calcNumber) {
     const calcDescription = `${resultBeforeCalc} ${operator} ${calcNumber}`;
-    outputResult(currentResult,calcDescription );
+    outputResult(currentResult, calcDescription);
 }
 
-function writeToLog(
-    operationIdentifier,
-    prevResult,
-    operationNumber,
-    newResult
-) {
+// Save calculation details to log
+function writeToLog(operationIdentifier, prevResult, operationNumber, newResult) {
     const logEntry = {
         operation: operationIdentifier,
         prevResult: prevResult,
@@ -29,6 +25,7 @@ function writeToLog(
     console.log(logEntries);
 }
 
+// Main function to calculate based on type
 function calculateResult(calculationType) {
     const enteredNumber = getUserNumberInput();
     if (
@@ -39,7 +36,7 @@ function calculateResult(calculationType) {
         calculationType !== 'POWER' &&
         calculationType !== 'PERCENT'   
     ) {
-        return;
+        return; // Stop if type is invalid
     }
 
     if (!enteredNumber) {
@@ -52,13 +49,13 @@ function calculateResult(calculationType) {
     if (calculationType === 'ADD') {
         currentResult += enteredNumber;
         mathOperator = '+';
-    } else if ( calculationType === 'SUBTRACT' ) {
+    } else if (calculationType === 'SUBTRACT') {
         currentResult -= enteredNumber;
         mathOperator = '-';
-    }else if ( calculationType === 'MULTIPLY' ) {
+    } else if (calculationType === 'MULTIPLY') {
         currentResult *= enteredNumber;
         mathOperator = '*';
-    }else if ( calculationType === 'DIVIDE' ) {
+    } else if (calculationType === 'DIVIDE') {
         currentResult /= enteredNumber;
         mathOperator = '/';
     } else if (calculationType === 'POWER') { 
@@ -71,7 +68,6 @@ function calculateResult(calculationType) {
 
     creatAndWriteOutput(mathOperator, initialResult, enteredNumber);
     writeToLog(calculationType, initialResult, enteredNumber, currentResult);
-      
 }
 
 function add() {
@@ -79,14 +75,14 @@ function add() {
 }
 
 function subtract() {
-   calculateResult('SUBTRACT');
+    calculateResult('SUBTRACT');
 }
 
 function multiply() {
     calculateResult('MULTIPLY');
 }
 
-function divide () {
+function divide() {
     calculateResult('DIVIDE');
 }
 
@@ -95,9 +91,10 @@ function power() {
 }
 
 function percent() {
-     calculateResult('PERCENT'); 
+    calculateResult('PERCENT'); 
 }
 
+// Reset everything to start
 function clear() {
     const initialResult = currentResult;
     currentResult = defultResult;
@@ -108,11 +105,11 @@ function clear() {
     console.clear();
 }
 
+// Switch between light and dark mode
 function toggleTheme() {
-    document.body.classList.toggle('dark-mode');
+    document.body.classList.toggle('dark-mode'); // Add or remove dark-mode class
     toggleThemeBtn.textContent = 
-    document.body.classList.contains
-    ('dark-mode') ? 'Light Mode' : 'Dark Mode'; 
+        document.body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode'; // Change button text
 }
 
 addBtn.addEventListener("click", add);
@@ -124,7 +121,4 @@ powerBtn.addEventListener("click", power);
 percentBtn.addEventListener("click", percent);
 toggleThemeBtn.addEventListener("click", toggleTheme);
 
-
-
-
-console.log("");
+console.log(""); // Empty log to console
