@@ -37,6 +37,7 @@ header h1 {
   cursor: pointer;
   border-radius: 1rem;
   order: -1;
+  transition: background-color 0.4s, border-color 0.4s, color 0.4s;
 }
 
 .spacer {
@@ -48,7 +49,7 @@ header h1 {
 #toggle-theme-btn:active {
   background: #023d6d;
   border-color: #023d6d;
- }
+}
 
 #results,
 #calculator {
@@ -155,4 +156,17 @@ body.dark-mode #calculator button:hover,
 body.dark-mode #calculator button:active {
   background: #333333;
   border-color: #ffffff;
+}
+
+body.dark-mode #toggle-theme-btn {
+  background: #b2bec3;
+  border: 1px solid #C0C0C0;
+  color: #121212; 
+}
+
+
+body.dark-mode #toggle-theme-btn:hover,
+body.dark-mode #toggle-theme-btn:active {
+  background: #dfe6e9;
+  border-color: #A9A9A9;
 }
