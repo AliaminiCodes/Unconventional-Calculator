@@ -108,6 +108,13 @@ function clear() {
     console.clear();
 }
 
+function toggleTheme() {
+    document.body.classList.toggle('dark-mode');
+    toggleThemeBtn.textContent = 
+    document.body.classList.contains
+    ('dark-mode') ? 'Light Mode' : 'Dark Mode'; 
+}
+
 addBtn.addEventListener("click", add);
 subtractBtn.addEventListener("click", subtract);
 multiplyBtn.addEventListener("click", multiply);
@@ -115,6 +122,8 @@ divideBtn.addEventListener("click", divide);
 clearBtn.addEventListener("click", clear);
 powerBtn.addEventListener("click", power);
 percentBtn.addEventListener("click", percent);
+toggleThemeBtn.addEventListener("click", toggleTheme);
+
 
 
 
