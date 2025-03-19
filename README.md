@@ -34,15 +34,15 @@ As someone who understands both frontend and backend, I ensured users can’t br
 
 ### Console Logging
 You can see everything you’ve done in the console history—and even clear it with a button! Check out the console log screenshot below:
-![Console_Log](image/Console_Log.png)
+[![Console_Log](image/Console_Log.png)](https://github.com/AliaminiCodes/Unconventional-Calculator.git/raw/main/image/Console_Log.png)
 
 ### Fun Fact
 The JS code, combining both `vendor.js` and `app.js`, without comments, line breaks, or extra spaces, is just 34 lines! See it here: [minified.js](minified/minified.js).
 
 ## Screenshots
 Here’s what the calculator looks like in both themes:
-- **Light Theme:** ![Light_Theme](image/Light_Theme.png)
-- **Dark Theme:** ![Dark_Theme](image/Dark_Theme.png)
+- **Light Theme:** [![Light_Theme](image/Light_Theme.png)](https://github.com/AliaminiCodes/Unconventional-Calculator.git/raw/main/image/Light_Theme.png)
+- **Dark Theme:** [![Dark_Theme](image/Dark_Theme.png)](https://github.com/AliaminiCodes/Unconventional-Calculator.git/raw/main/image/Dark_Theme.png)
 
 ## Additional Screenshots
 All screenshots, including the `Performance.png` (load and parse order) and `Console_Log.png` (console history), are stored in the `image` folder.
