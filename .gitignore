@@ -1,0 +1,24 @@
+# Editor files
+.vscode/
+*.code-workspace
+
+# Temporary system files
+.DS_Store
+Thumbs.db
+
+# Cache and backup files
+*.bak
+*.tmp
+
+# Node.js dependencies (if you use npm later)
+node_modules/
+
+# Sensitive files
+.env
+*.key
+*.pem
+
+# Large or unnecessary files
+*.zip
+*.tar.gz
+*.log
