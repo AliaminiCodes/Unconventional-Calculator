@@ -31,7 +31,7 @@ All falsy values (like empty inputs or zeros) are filtered out, keeping the calc
 You can see everything you’ve done in the console history—and even clear it with a button! Check out the console log screenshot below:
 ![Cosole_Log](https://github.com/AliaminiCodes/Unconventional-Calculator/raw/main/image/Cosole_Log .png)
 ### Fun Fact
-The JS code, combining both `vendor.js` and `app.js`, without comments, line breaks, or extra spaces, is just 34 lines! See it here: minified/minified.js
+The JS code, combining both `vendor.js` and `app.js`, without comments, line breaks, or extra spaces, is just 34 lines! See it here:![Performance](https://github.com/AliaminiCodes/Unconventional-Calculator/raw/main/image/Performance.png)
 
 ## Screenshots
 Here’s what the calculator looks like in both themes:
@@ -43,7 +43,7 @@ All screenshots, including the `Performance.png` (load and parse order) and `Con
 
 ## Links
 - **GitHub Repository:** [https://github.com/AliaminiCodes/Unconventional-Calculator](https://github.com/AliaminiCodes/Unconventional-Calculator)
-- **Live Demo:** [Add link here after setting up GitHub Pages]
+- **Live Demo:** []
 
 ## About
 - **Gmail:** [ali.amini.codes@gmail.com](mailto:ali.amini.codes@gmail.com)
