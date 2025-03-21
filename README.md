@@ -29,13 +29,13 @@ All falsy values (like empty inputs or zeros) are filtered out, keeping the calc
 
 ### Console Logging
 You can see everything you’ve done in the console history—and even clear it with a button! Check out the console log screenshot below:
-![Cosole_Log](https://github.com/AliaminiCodes/Unconventional-Calculator/raw/main/image/Cosole_Log .png)
+![Console Log](https://github.com/AliaminiCodes/Unconventional-Calculator/raw/main/image/consolelog.png)
 ### Fun Fact
 The JS code, combining both `vendor.js` and `app.js`, without comments, line breaks, or extra spaces, is just 34 lines! See it here:[minified.js](minified/minified.js).
 ## Screenshots
 Here’s what the calculator looks like in both themes:
-- **Light Theme:** image/Light_them.png
-- **Dark Theme:** image/Dark_them.png
+- **Light Theme:** ![Light Theme](https://github.com/AliaminiCodes/Unconventional-Calculator/raw/main/image/lighttheme.png)
+- **Dark Theme:** ![Dark Theme](https://github.com/AliaminiCodes/Unconventional-Calculator/raw/main/image/darktheme.png)
 
 ## Additional Screenshots
 All screenshots, including the `Performance.png` (load and parse order) and `Console_Log.png` (console history), are stored in the `image` folder.
