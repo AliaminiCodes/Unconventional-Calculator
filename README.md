@@ -42,8 +42,11 @@ All screenshots, including the `Performance.png` (load and parse order) and `Con
 
 ## Links
 - **GitHub Repository:** [https://github.com/AliaminiCodes/Unconventional-Calculator](https://github.com/AliaminiCodes/Unconventional-Calculator)
-- **Live Demo:** []
+- **Live Demo:** [https://aliaminicodes.github.io/Unconventional-Calculator/]
 
 ## About
 - **Gmail:** [ali.amini.codes@gmail.com](mailto:ali.amini.codes@gmail.com)
-- **LinkedIn:** [https://www.linkedin.com/in/ali-amini-codess](https://www.linkedin.com/in/ali-amini-codess)
+- **LinkedIn:** [AliAminiCodes](https://www.linkedin.com/in/ali-amini-codess)
+- **X (Twitter):** [@AliAminiCodes](https://twitter.com/AliAminiCodes)
+- **Instagram:** [@AliAminiCodes](https://www.instagram.com/AliAminiCodes)
+- **Telegram:** [@AliAminiCodes](https://t.me/AliAminiCodes)
